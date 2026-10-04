@@ -1,0 +1,1807 @@
+/* ==========================================================
+   PROJECT DETAILS PAGE
+   ========================================================== */
+
+.project-detail-page {
+  --navy: #061d35;
+  --navy-2: #082746;
+  --navy-3: #0a3153;
+
+  --gold: #f1c54f;
+  --gold-dark: #c49720;
+  --gold-soft: #f6d777;
+
+  --text: #173b59;
+  --muted: #60758a;
+
+  --light: #f3f6f9;
+  --line: #d9e2e9;
+
+  --serif:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  width: 100%;
+  min-height: 100vh;
+
+  overflow-x: hidden;
+
+  background: #ffffff;
+  color: var(--text);
+
+  isolation: isolate;
+}
+
+
+/* ==========================================================
+   GLOBAL
+   ========================================================== */
+
+.project-detail-page *,
+.project-detail-page *::before,
+.project-detail-page *::after {
+  box-sizing: border-box;
+}
+
+.project-detail-page img {
+  max-width: 100%;
+}
+
+.project-shell {
+  width: min(1180px, calc(100% - 80px));
+  margin: 0 auto;
+}
+
+
+/* ==========================================================
+   HERO
+   ========================================================== */
+
+.project-hero {
+  position: relative;
+
+  min-height: 535px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 76% 28%,
+      rgba(16, 93, 112, 0.42),
+      transparent 28%
+    ),
+    linear-gradient(
+      135deg,
+      #051a30 0%,
+      #062440 55%,
+      #08344d 100%
+    );
+
+  color: #ffffff;
+}
+
+
+/* Decorative circles */
+
+.project-hero-decoration {
+  position: absolute;
+
+  pointer-events: none;
+
+  border: 1px solid rgba(241, 197, 79, 0.1);
+
+  border-radius: 50%;
+}
+
+.decoration-left {
+  width: 340px;
+  height: 340px;
+
+  left: -220px;
+  bottom: -180px;
+}
+
+.decoration-right {
+  width: 450px;
+  height: 450px;
+
+  right: -270px;
+  top: -230px;
+}
+
+
+/* Back link */
+
+.project-back-link {
+  display: inline-flex;
+
+  padding-top: 27px;
+
+  color: #dce6ee;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.project-back-link:hover {
+  color: var(--gold);
+  transform: translateX(2px);
+}
+
+
+/* ==========================================================
+   HERO GRID
+   ========================================================== */
+
+.project-hero-grid {
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.86fr)
+    minmax(0, 1.14fr);
+
+  gap: 70px;
+
+  align-items: center;
+
+  padding:
+    42px
+    0
+    52px;
+}
+
+.project-hero-copy {
+  max-width: 530px;
+}
+
+
+/* Project tag */
+
+.project-tag {
+  display: inline-flex;
+
+  padding: 6px 13px;
+
+  border: 1px solid var(--gold);
+  border-radius: 99px;
+
+  color: var(--gold-soft);
+
+  background: rgba(241, 197, 79, 0.07);
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+
+/* Hero heading */
+
+.project-hero-copy h1 {
+  margin: 17px 0 18px;
+
+  color: #ffffff !important;
+
+  font-family: var(--serif);
+
+  font-size: clamp(46px, 5vw, 69px);
+
+  font-weight: 600;
+
+  line-height: 0.96;
+
+  letter-spacing: -2px;
+}
+
+.project-hero-copy h1 span {
+  display: block;
+
+  color: var(--gold) !important;
+}
+
+
+/* Hero description */
+
+.project-hero-copy p {
+  max-width: 520px;
+
+  margin: 0;
+
+  color: #d7e3ec;
+
+  font-size: 15px;
+
+  line-height: 1.72;
+}
+
+
+/* ==========================================================
+   HERO BUTTONS
+   ========================================================== */
+
+.project-hero-actions {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  margin-top: 27px;
+}
+
+.project-gold-button,
+.project-outline-button {
+  min-height: 43px;
+
+  padding: 0 18px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  border-radius: 24px;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.project-gold-button {
+  background: var(--gold);
+
+  border: 1px solid var(--gold);
+
+  color: var(--navy);
+}
+
+.project-gold-button:hover {
+  background: #ffe082;
+
+  transform: translateY(-2px);
+}
+
+.project-outline-button {
+  border: 1px solid rgba(255, 255, 255, 0.65);
+
+  color: #ffffff;
+
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.project-outline-button:hover {
+  border-color: var(--gold);
+
+  color: var(--gold);
+
+  transform: translateY(-2px);
+}
+
+
+/* ==========================================================
+   HERO IMAGE
+   IMPORTANT:
+   The image is now fully visible.
+   object-fit: contain prevents embedded labels/tags
+   from being cropped.
+   ========================================================== */
+
+.project-hero-visual {
+  position: relative;
+
+  width: 100%;
+
+  min-width: 0;
+}
+
+
+/*
+   The frame keeps a professional landscape proportion
+   while allowing the complete image to remain visible.
+*/
+
+.hero-main-image {
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: 16 / 9;
+
+  min-height: 300px;
+
+  overflow: hidden;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border:
+    1px solid
+    rgba(241, 197, 79, 0.75);
+
+  border-radius: 9px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #0b2c49,
+      #071f36
+    );
+
+  box-shadow:
+    0 25px 50px
+    rgba(0, 0, 0, 0.27);
+}
+
+
+/*
+   MAIN FIX
+
+   contain = entire image remains visible.
+
+   No part of the source image is sacrificed.
+*/
+
+.hero-main-image > img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: contain;
+
+  object-position: center center;
+
+  filter: saturate(0.95);
+}
+
+
+/*
+   If an image is slightly smaller than the frame,
+   the dark background blends naturally with the page.
+*/
+
+
+/* ==========================================================
+   CROP DISEASE AI OVERLAY
+   ========================================================== */
+
+.detection-frame {
+  position: absolute;
+
+  left: 31%;
+  top: 29%;
+
+  width: 38%;
+  height: 40%;
+
+  border:
+    2px solid
+    #39d98a;
+
+  background:
+    rgba(32, 211, 135, 0.07);
+
+  box-shadow:
+    0 0 0 1px
+    rgba(32, 211, 135, 0.15);
+
+  pointer-events: none;
+}
+
+.detection-frame span,
+.detection-frame strong {
+  position: absolute;
+
+  top: -39px;
+
+  display: block;
+
+  min-height: 29px;
+
+  padding: 7px 10px;
+
+  color: #ffffff;
+
+  background: #19b976;
+
+  font-size: 10px;
+
+  line-height: 15px;
+
+  white-space: nowrap;
+}
+
+.detection-frame span {
+  left: 0;
+}
+
+.detection-frame strong {
+  left: 100%;
+
+  margin-left: 3px;
+
+  background: #11965f;
+}
+
+
+/* ==========================================================
+   HERO THUMBNAILS
+   ========================================================== */
+
+.hero-thumb-stack {
+  position: absolute;
+
+  top: 30px;
+  right: 20px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+
+  width: 52px;
+}
+
+.hero-thumb-stack > div {
+  width: 52px;
+  height: 52px;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.45);
+
+  border-radius: 7px;
+
+  background: #0b2d48;
+}
+
+.hero-thumb-stack img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+
+/* ==========================================================
+   META BAR
+   ========================================================== */
+
+.project-meta-bar {
+  position: relative;
+
+  z-index: 8;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  margin-top: -20px;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    rgba(93, 169, 215, 0.65);
+
+  border-radius: 9px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #092744,
+      #073451
+    );
+
+  box-shadow:
+    0 16px 35px
+    rgba(0, 25, 50, 0.18);
+}
+
+.project-meta-item {
+  min-height: 68px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  padding: 13px 25px;
+
+  border-right:
+    1px solid
+    rgba(255, 255, 255, 0.16);
+}
+
+.project-meta-item:last-child {
+  border-right: none;
+}
+
+.meta-symbol {
+  flex: 0 0 auto;
+
+  color: var(--gold);
+
+  font-size: 23px;
+}
+
+.project-meta-item small {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #9db4c9;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+.project-meta-item strong {
+  color: #ffffff;
+
+  font-size: 12px;
+
+  font-weight: 500;
+}
+
+
+/* ==========================================================
+   OVERVIEW
+   ========================================================== */
+
+.project-overview {
+  position: relative;
+
+  padding: 72px 0 68px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #f6f9fb,
+      #f1f5f8
+    );
+}
+
+.project-overview-top {
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    0.95fr;
+
+  gap: 60px;
+
+  align-items: center;
+}
+
+
+/* Section labels */
+
+.project-section-label {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin-bottom: 12px;
+
+  color: var(--gold-dark);
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.4px;
+}
+
+.project-section-label span {
+  width: 25px;
+  height: 2px;
+
+  display: inline-block;
+
+  background: var(--gold);
+}
+
+.project-section-label.light {
+  color: var(--gold-soft);
+}
+
+
+/* Overview headings */
+
+.project-overview h2,
+.technology-inner h2,
+.process-grid h2,
+.project-gallery h2 {
+  margin: 0;
+
+  color: var(--navy);
+
+  font-family: var(--serif);
+
+  font-size: 29px;
+
+  line-height: 1.12;
+}
+
+.project-overview h2 em {
+  color: var(--gold-dark);
+
+  font-style: normal;
+}
+
+.project-overview-text {
+  max-width: 610px;
+
+  margin: 16px 0 0;
+
+  color: #536b80;
+
+  font-size: 13px;
+
+  line-height: 1.78;
+}
+
+
+/* Facts */
+
+.project-facts {
+  display: flex;
+
+  gap: 45px;
+
+  margin-top: 27px;
+}
+
+.project-facts > div {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.fact-icon {
+  color: var(--gold-dark);
+
+  font-size: 21px;
+}
+
+.project-facts small,
+.project-facts strong {
+  display: block;
+}
+
+.project-facts small {
+  margin-bottom: 3px;
+
+  color: #8594a2;
+
+  font-size: 8px;
+
+  letter-spacing: 0.9px;
+}
+
+.project-facts strong {
+  color: #284a66;
+
+  font-size: 10px;
+
+  font-weight: 500;
+}
+
+
+/* Overview image */
+
+.overview-image-card {
+  width: 100%;
+
+  aspect-ratio: 16 / 9;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    #d9e1e7;
+
+  border-radius: 8px;
+
+  background: #e8eef2;
+
+  box-shadow:
+    0 13px 35px
+    rgba(12, 43, 70, 0.1);
+}
+
+.overview-image-card img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: contain;
+
+  background: #edf2f5;
+}
+
+
+/* ==========================================================
+   CHALLENGE
+   ========================================================== */
+
+.challenge-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 18px;
+
+  margin-top: 28px;
+}
+
+.challenge-card {
+  min-height: 175px;
+
+  display: grid;
+
+  grid-template-columns:
+    42px
+    1fr;
+
+  gap: 18px;
+
+  padding: 27px;
+
+  border:
+    1px solid
+    #d7e1e8;
+
+  border-radius: 8px;
+
+  background:
+    rgba(255, 255, 255, 0.58);
+
+  box-shadow:
+    0 7px 22px
+    rgba(16, 47, 73, 0.045);
+}
+
+.challenge-icon {
+  width: 37px;
+  height: 37px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+
+  color: #9f771c;
+
+  background: #fff6de;
+
+  border:
+    1px solid
+    #e8cb80;
+
+  font-size: 16px;
+
+  font-weight: 800;
+}
+
+.solution-icon {
+  color: #4b806f;
+
+  background: #eaf5f0;
+
+  border-color: #b8d9cb;
+}
+
+.challenge-card > div:last-child > span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #7c8c9b;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+.challenge-card h3 {
+  margin: 0 0 8px;
+
+  color: var(--navy);
+
+  font-family: var(--serif);
+
+  font-size: 21px;
+}
+
+.challenge-card p {
+  margin: 0;
+
+  color: #5a7084;
+
+  font-size: 11px;
+
+  line-height: 1.75;
+}
+
+
+/* ==========================================================
+   TECHNOLOGY BAND
+   ========================================================== */
+
+.technology-section {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 49px 0;
+
+  background:
+    radial-gradient(
+      circle at 80% 40%,
+      rgba(28, 105, 122, 0.33),
+      transparent 31%
+    ),
+    linear-gradient(
+      135deg,
+      #041c32,
+      #082b47
+    );
+
+  color: #ffffff;
+}
+
+.technology-inner {
+  position: relative;
+
+  z-index: 2;
+
+  display: grid;
+
+  grid-template-columns:
+    0.85fr
+    1.15fr;
+
+  gap: 55px;
+
+  align-items: center;
+}
+
+.technology-copy {
+  max-width: 390px;
+}
+
+.technology-copy h2 {
+  color: #ffffff;
+}
+
+.technology-copy p {
+  max-width: 380px;
+
+  margin: 11px 0 0;
+
+  color: #bfd0de;
+
+  font-size: 11px;
+
+  line-height: 1.65;
+}
+
+.technology-list {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 9px;
+}
+
+.technology-chip {
+  min-height: 45px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 0 14px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.16);
+
+  border-radius: 7px;
+
+  background:
+    rgba(255, 255, 255, 0.035);
+
+  color: #e5edf4;
+
+  font-size: 10px;
+
+  font-weight: 600;
+}
+
+.technology-chip span {
+  color: var(--gold);
+
+  font-size: 14px;
+}
+
+
+/* Decorative technology circles */
+
+.technology-leaf {
+  position: absolute;
+
+  pointer-events: none;
+
+  border:
+    1px solid
+    rgba(241, 197, 79, 0.08);
+
+  border-radius: 50%;
+}
+
+.technology-section .decoration-left {
+  left: -230px;
+  bottom: -230px;
+}
+
+.technology-section .decoration-right {
+  right: -300px;
+  top: -300px;
+}
+
+
+/* ==========================================================
+   PROCESS
+   ========================================================== */
+
+.process-section {
+  padding: 70px 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff,
+      #f6f8fa
+    );
+}
+
+.process-grid {
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    0.95fr;
+
+  gap: 65px;
+
+  align-items: center;
+}
+
+.process-grid h2 {
+  margin-top: 0;
+
+  font-size: 28px;
+}
+
+.section-supporting-text {
+  margin: 10px 0 0;
+
+  color: var(--muted);
+
+  font-size: 11px;
+
+  line-height: 1.65;
+}
+
+
+/* Process flow */
+
+.process-flow {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 12px;
+
+  margin-top: 28px;
+}
+
+.process-step {
+  position: relative;
+
+  min-width: 0;
+}
+
+.step-circle {
+  width: 35px;
+  height: 35px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: var(--navy);
+
+  color: #ffffff;
+
+  font-size: 9px;
+
+  font-weight: 700;
+}
+
+.step-arrow {
+  position: absolute;
+
+  top: 9px;
+  right: 9px;
+
+  color: #c3a34a;
+
+  font-size: 16px;
+}
+
+.process-step strong,
+.process-step small {
+  display: block;
+}
+
+.process-step strong {
+  margin-top: 12px;
+
+  color: #153753;
+
+  font-size: 10px;
+}
+
+.process-step small {
+  margin-top: 3px;
+
+  color: #7b8c9c;
+
+  font-size: 9px;
+}
+
+
+/* Impact */
+
+.impact-panel {
+  padding-left: 38px;
+
+  border-left:
+    1px solid
+    #d7e0e6;
+}
+
+.impact-panel h2 {
+  margin-top: 0;
+}
+
+.impact-panel > p {
+  max-width: 440px;
+
+  color: var(--muted);
+
+  font-size: 11px;
+
+  line-height: 1.7;
+}
+
+.impact-panel ul {
+  padding: 0;
+
+  margin: 18px 0 0;
+
+  list-style: none;
+}
+
+.impact-panel li {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin-bottom: 10px;
+
+  color: #425d74;
+
+  font-size: 10px;
+}
+
+.impact-panel li span {
+  color: #ddb744;
+
+  font-weight: 800;
+}
+
+
+/* ==========================================================
+   PROJECT GALLERY
+   ========================================================== */
+
+.project-gallery {
+  position: relative;
+
+  padding: 58px 0;
+
+  background:
+    radial-gradient(
+      circle at 83% 25%,
+      rgba(32, 109, 124, 0.3),
+      transparent 28%
+    ),
+    linear-gradient(
+      135deg,
+      #051d34,
+      #092945
+    );
+
+  color: #ffffff;
+
+  overflow: hidden;
+}
+
+.project-gallery h2 {
+  margin-top: 0;
+
+  color: #ffffff;
+}
+
+.gallery-description {
+  margin: 8px 0 24px;
+
+  color: #bcd0df;
+
+  font-size: 10px;
+}
+
+.gallery-grid {
+  display: grid;
+
+  grid-template-columns:
+    1.08fr
+    0.9fr
+    0.9fr
+    0.9fr;
+
+  gap: 12px;
+}
+
+.gallery-item {
+  position: relative;
+
+  height: 115px;
+
+  margin: 0;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.22);
+
+  border-radius: 7px;
+
+  background: #0c3554;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.35s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.035);
+}
+
+.gallery-item figcaption {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  padding:
+    21px
+    10px
+    8px;
+
+  background:
+    linear-gradient(
+      transparent,
+      rgba(4, 25, 44, 0.88)
+    );
+
+  color: #ffffff;
+
+  font-size: 8px;
+
+  font-weight: 600;
+}
+
+.gallery-featured {
+  border-color:
+    rgba(241, 197, 79, 0.55);
+}
+
+
+/* ==========================================================
+   CTA
+   ========================================================== */
+
+.project-cta {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 35px 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(4, 24, 43, 0.98),
+      rgba(5, 31, 53, 0.94)
+    );
+
+  color: #ffffff;
+}
+
+.project-cta-background {
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  opacity: 0.12;
+
+  background:
+    radial-gradient(
+      ellipse at 20% 100%,
+      transparent 0 38%,
+      rgba(241, 197, 79, 0.45) 39% 40%,
+      transparent 41%
+    );
+}
+
+.project-cta-inner {
+  position: relative;
+
+  z-index: 2;
+
+  min-height: 110px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 40px;
+}
+
+.cta-eyebrow {
+  color: var(--gold);
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+.project-cta h2 {
+  margin: 6px 0;
+
+  color: #ffffff;
+
+  font-family: var(--serif);
+
+  font-size: 27px;
+}
+
+.project-cta h2 em {
+  color: var(--gold);
+
+  font-style: normal;
+}
+
+.project-cta p {
+  max-width: 500px;
+
+  margin: 0;
+
+  color: #bdcfdd;
+
+  font-size: 10px;
+
+  line-height: 1.55;
+}
+
+.cta-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  flex-shrink: 0;
+}
+
+
+/* ==========================================================
+   NOT FOUND
+   ========================================================== */
+
+.project-not-found {
+  min-height: 70vh;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+}
+
+.project-not-found-content {
+  width: min(700px, 88%);
+
+  text-align: center;
+}
+
+.project-not-found-content .project-label {
+  justify-content: center;
+}
+
+.project-not-found-content h1 {
+  margin: 10px 0;
+
+  color: var(--navy);
+
+  font-family: var(--serif);
+
+  font-size: 44px;
+}
+
+.project-not-found-content p {
+  margin-bottom: 25px;
+
+  color: var(--muted);
+
+  font-size: 13px;
+}
+
+
+/* ==========================================================
+   RESPONSIVE — TABLET
+   ========================================================== */
+
+@media (max-width: 980px) {
+
+  .project-shell {
+    width: min(100% - 50px, 900px);
+  }
+
+  .project-hero-grid,
+  .project-overview-top,
+  .technology-inner,
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-hero-grid {
+    gap: 42px;
+  }
+
+  .project-hero-copy {
+    max-width: 700px;
+  }
+
+  /*
+     Important:
+     On tablet the image remains fully visible.
+  */
+
+  .hero-main-image {
+    aspect-ratio: 16 / 9;
+
+    min-height: 320px;
+  }
+
+  .project-meta-bar {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .project-meta-item:nth-child(2) {
+    border-right: none;
+  }
+
+  .technology-copy {
+    max-width: 600px;
+  }
+
+  .technology-list {
+    max-width: 650px;
+  }
+
+  .impact-panel {
+    border-left: none;
+
+    padding-left: 0;
+
+    padding-top: 35px;
+
+    border-top:
+      1px solid
+      #d7e0e6;
+  }
+}
+
+
+/* ==========================================================
+   RESPONSIVE — MOBILE
+   ========================================================== */
+
+@media (max-width: 700px) {
+
+  .project-shell {
+    width: calc(100% - 30px);
+  }
+
+  .project-hero {
+    min-height: 0;
+  }
+
+  .project-back-link {
+    padding-top: 20px;
+  }
+
+  .project-hero-grid {
+    padding-top: 28px;
+
+    padding-bottom: 40px;
+  }
+
+  .project-hero-copy h1 {
+    font-size: 44px;
+  }
+
+  /*
+     Keep the complete image visible on mobile.
+  */
+
+  .hero-main-image {
+    aspect-ratio: 16 / 10;
+
+    min-height: 250px;
+  }
+
+  .project-meta-bar {
+    grid-template-columns: 1fr;
+  }
+
+  .project-meta-item {
+    border-right: none;
+
+    border-bottom:
+      1px solid
+      rgba(255, 255, 255, 0.13);
+  }
+
+  .project-meta-item:last-child {
+    border-bottom: none;
+  }
+
+  .project-overview {
+    padding: 60px 0;
+  }
+
+  .challenge-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .technology-section {
+    padding: 58px 0;
+  }
+
+  .technology-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .process-section {
+    padding: 58px 0;
+  }
+
+  .process-flow {
+    grid-template-columns: 1fr 1fr;
+
+    row-gap: 24px;
+  }
+
+  .step-arrow {
+    display: none;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .project-cta-inner {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    padding: 15px 0;
+  }
+
+  .cta-actions {
+    width: 100%;
+  }
+}
+
+
+/* ==========================================================
+   RESPONSIVE — SMALL PHONES
+   ========================================================== */
+
+@media (max-width: 480px) {
+
+  .project-shell {
+    width: calc(100% - 24px);
+  }
+
+  .project-hero-copy h1 {
+    font-size: 38px;
+  }
+
+  .project-hero-copy p {
+    font-size: 14px;
+  }
+
+  .project-hero-actions {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .project-gold-button,
+  .project-outline-button {
+    width: 100%;
+  }
+
+
+  /*
+     Final mobile hero configuration.
+
+     The source image is NEVER cropped.
+  */
+
+  .hero-main-image {
+    width: 100%;
+
+    aspect-ratio: 16 / 11;
+
+    min-height: 215px;
+
+    padding: 0;
+  }
+
+  .hero-main-image > img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    object-position: center;
+  }
+
+
+  /*
+     The AI overlay is reduced so it does not cover
+     important content on very small screens.
+  */
+
+  .detection-frame {
+    left: 27%;
+
+    width: 43%;
+
+    height: 40%;
+  }
+
+  .detection-frame span,
+  .detection-frame strong {
+    font-size: 8px;
+
+    min-height: 24px;
+
+    padding:
+      5px
+      7px;
+  }
+
+  .detection-frame span {
+    top: -29px;
+  }
+
+  .detection-frame strong {
+    top: -29px;
+  }
+
+
+  /*
+     Thumbnail stack is hidden on very small devices
+     to give the actual project image maximum visibility.
+  */
+
+  .hero-thumb-stack {
+    display: none;
+  }
+
+
+  .project-overview h2,
+  .technology-inner h2,
+  .process-grid h2,
+  .project-gallery h2 {
+    font-size: 26px;
+  }
+
+  .project-facts {
+    flex-direction: column;
+
+    gap: 14px;
+  }
+
+  .technology-list {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-item {
+    height: 180px;
+  }
+
+  .cta-actions {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .cta-actions a {
+    width: 100%;
+  }
+}
+
+
+/* ==========================================================
+   EXTRA PROTECTION AGAINST IMAGE CROPPING
+   ========================================================== */
+
+/*
+   These rules specifically ensure that the primary
+   project images can never be forced into a cropped
+   presentation by a global stylesheet elsewhere.
+*/
+
+.project-detail-page .hero-main-image > img {
+  object-fit: contain !important;
+
+  object-position: center center !important;
+
+  max-width: 100% !important;
+
+  max-height: 100% !important;
+}
+
+
+/*
+   Overview images also remain complete.
+*/
+
+.project-detail-page .overview-image-card img {
+  object-fit: contain !important;
+
+  object-position: center center !important;
+}
+
+
+/*
+   Prevent global img rules from distorting proportions.
+*/
+
+.project-detail-page .hero-main-image img,
+.project-detail-page .overview-image-card img {
+  height: 100%;
+}
+
+
+/* ==========================================================
+   ACCESSIBILITY
+   ========================================================== */
+
+.project-detail-page a:focus-visible {
+  outline: 2px solid var(--gold);
+
+  outline-offset: 3px;
+}
+
+
+/* ==========================================================
+   REDUCED MOTION
+   ========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .project-detail-page *,
+  .project-detail-page *::before,
+  .project-detail-page *::after {
+    scroll-behavior: auto !important;
+
+    transition: none !important;
+
+    animation: none !important;
+  }
+}
