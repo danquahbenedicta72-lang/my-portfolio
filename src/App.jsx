@@ -9,13 +9,13 @@ import Skills from './Components/Skills.jsx'
 import Contact from './Components/Contact.jsx'
 
 import About from './Pages/About.jsx'
+import ContactPage from './Pages/ContactPage.jsx'
 import ProjectDetails from './Pages/ProjectDetails.jsx'
 import NotFound from './Pages/NotFound.jsx'
 
-import cropDisease from './portfolio_assets/crop-disease.png'
-import smartWaste from './portfolio_assets/smart-waste.png'
-import librarySystem from './portfolio_assets/library-system.png'
-
+import cropDiseaseCard from './portfolio_assets/crop-disease-card.png'
+import smartWasteCard from './portfolio_assets/smart-waste-card.png'
+import librarySystemCard from './portfolio_assets/library-system-card.png'
 
 /* =========================================================
    SERVICES
@@ -44,14 +44,13 @@ const services = [
   },
 ]
 
-
 /* =========================================================
    PROJECTS
    ========================================================= */
 
 const projects = [
   {
-    image: cropDisease,
+    image: cropDiseaseCard,
     tag: 'AGRICULTURE',
     title: 'Crop Disease Detection',
     text:
@@ -60,7 +59,7 @@ const projects = [
   },
 
   {
-    image: smartWaste,
+    image: smartWasteCard,
     tag: 'SUSTAINABILITY',
     title: 'Smart Waste Management',
     text:
@@ -69,7 +68,7 @@ const projects = [
   },
 
   {
-    image: librarySystem,
+    image: librarySystemCard,
     tag: 'EDUCATION',
     title: 'Library Management System',
     text:
@@ -77,7 +76,6 @@ const projects = [
     slug: 'library-management-system',
   },
 ]
-
 
 /* =========================================================
    SKILLS
@@ -93,7 +91,6 @@ const skills = [
   ['▣', 'Artificial Intelligence'],
   ['☁', 'System Design'],
 ]
-
 
 /* =========================================================
    HOME PAGE
@@ -121,7 +118,6 @@ function Home() {
   )
 }
 
-
 /* =========================================================
    APPLICATION ROUTES
    ========================================================= */
@@ -142,6 +138,12 @@ function App() {
         <Route
           path="/about"
           element={<About />}
+        />
+
+        {/* CONTACT */}
+        <Route
+          path="/contact"
+          element={<ContactPage />}
         />
 
         {/* PROJECT DETAILS */}

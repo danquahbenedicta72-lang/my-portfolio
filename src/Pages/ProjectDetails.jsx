@@ -1,4 +1,4 @@
-import { Link, useParams } from 'react-router-dom'
+﻿import { Link, useParams } from 'react-router-dom'
 import './ProjectDetails.css'
 
 /* =========================================================
@@ -35,8 +35,6 @@ import libraryEnvironment from '../portfolio_assets/library-environment.png'
 
 const projects = {
   'crop-disease-detection': {
-    tag: 'AGRICULTURE',
-
     title: 'Crop Disease',
 
     accent: 'Detection',
@@ -46,32 +44,30 @@ const projects = {
     overviewImage: cropDiseaseDashboard,
 
     description:
-      'A machine learning solution designed to support the early identification of crop diseases and improve sustainable agricultural practice.',
+      'An academic project concept exploring how image analysis and machine learning could support early crop disease identification.',
 
-    type: 'Machine Learning',
+    type: 'Academic project',
 
-    technology: 'Python',
+    technology: 'Proposed: Python',
 
     category: 'Agriculture',
 
-    status: 'Concept',
+    overviewTitle: 'Exploring',
 
-    overviewTitle: 'From Data to',
-
-    overviewAccent: 'Healthier Crops',
+    overviewAccent: 'Crop Health',
 
     overview:
-      'Crop Disease Detection explores the use of machine learning to assist with the early identification of crop diseases. The project applies data-driven methods to a practical agricultural challenge where early recognition can support better decision-making and improve crop productivity.',
+      'This academic project proposes exploring machine learning for early crop disease identification. It frames an agricultural challenge and outlines how image-based analysis might be investigated. The concept has not been implemented or evaluated.',
 
     focus: 'Early disease identification',
 
-    duration: 'Academic Project',
+    duration: 'Academic project',
 
     problem:
-      'Crop diseases can negatively affect agricultural productivity when they are not identified early. A practical digital approach can help transform visual information into useful insights for agricultural decision-making.',
+      'Crop diseases can negatively affect agricultural productivity when they are not identified early. This project considers whether image-based analysis could help provide useful information for agricultural decision-making.',
 
     solution:
-      'The proposed approach uses image-based analysis and machine learning techniques to identify patterns associated with crop diseases and provide a useful classification outcome.',
+      'The proposed direction is to investigate image-based analysis and machine learning for patterns associated with crop diseases. A working classifier and its performance have not been established.',
 
     technologies: [
       'Python',
@@ -81,35 +77,35 @@ const projects = {
     ],
 
     process: [
-      ['01', 'Collect', 'Data'],
-      ['02', 'Preprocess', 'Data'],
-      ['03', 'Train', 'Model'],
-      ['04', 'Evaluate', 'Results'],
+      ['01', 'Identify', 'Data needs'],
+      ['02', 'Plan', 'Preprocessing'],
+      ['03', 'Explore', 'Model options'],
+      ['04', 'Define', 'Evaluation'],
     ],
 
     impact: [
-      'Supports early disease identification',
-      'Improves data-driven agricultural decisions',
-      'Can help reduce potential crop losses',
-      'Supports sustainable farming practices',
+      'Could inform earlier crop disease investigation',
+      'Could support data-informed decisions if validated',
+      'Potential to explore approaches to crop-loss prevention',
+      'Could contribute to future sustainable farming tools',
     ],
 
     gallery: [
       {
         image: cropDisease,
-        label: 'Disease Detection',
+        label: 'Crop disease concept visual',
       },
       {
         image: cropDiseaseDashboard,
-        label: 'Analysis Dashboard',
+        label: 'Proposed analysis dashboard concept',
       },
       {
         image: cropDiseaseResults,
-        label: 'Leaf Classification',
+        label: 'Illustrative leaf-classification concept',
       },
       {
         image: cropDiseaseField,
-        label: 'Field Application',
+        label: 'Illustrative agricultural application',
       },
     ],
   },
@@ -120,8 +116,6 @@ const projects = {
      ========================================================= */
 
   'smart-waste-management': {
-    tag: 'SUSTAINABILITY',
-
     title: 'Smart Waste',
 
     accent: 'Management',
@@ -131,32 +125,30 @@ const projects = {
     overviewImage: smartWasteDashboard,
 
     description:
-      'A solar-powered waste management concept designed to improve collection, sorting and responsible recycling.',
+      'An academic concept exploring how solar power and connected technology could support waste collection, sorting and recycling.',
 
-    type: 'Intelligent Solution',
+    type: 'Academic project',
 
-    technology: 'IoT / Solar',
+    technology: 'Proposed: IoT / solar',
 
     category: 'Sustainability',
 
-    status: 'Concept',
+    overviewTitle: 'Exploring',
 
-    overviewTitle: 'From Waste to',
-
-    overviewAccent: 'Better Systems',
+    overviewAccent: 'Smarter Waste Systems',
 
     overview:
-      'Smart Waste Management explores a technology-driven approach to improving waste collection, sorting and responsible recycling through a practical and sustainable system concept.',
+      'This academic project proposes a technology-driven approach to waste collection, sorting and recycling. It explores how connected systems and solar power might contribute to a more sustainable design. The concept has not been implemented or tested.',
 
     focus: 'Smart waste collection',
 
-    duration: 'Innovation Project',
+    duration: 'Academic project',
 
     problem:
-      'Inefficient waste collection and poor sorting practices can contribute to environmental challenges. A smarter system can help improve how waste is collected, classified and managed.',
+      'Inefficient waste collection and poor sorting practices can contribute to environmental challenges. This concept considers how a connected system might support collection, classification and management.',
 
     solution:
-      'The proposed system combines solar-powered operation with intelligent waste-management principles to encourage efficient collection, sorting and responsible recycling.',
+      'The proposed direction is to explore solar-powered operation alongside connected waste-management features. Hardware, software and operational feasibility would need to be designed and tested.',
 
     technologies: [
       'IoT',
@@ -166,35 +158,35 @@ const projects = {
     ],
 
     process: [
-      ['01', 'Identify', 'Need'],
-      ['02', 'Design', 'System'],
-      ['03', 'Integrate', 'Technology'],
-      ['04', 'Evaluate', 'Impact'],
+      ['01', 'Define', 'Waste needs'],
+      ['02', 'Explore', 'System design'],
+      ['03', 'Plan', 'Technology'],
+      ['04', 'Identify', 'Tests needed'],
     ],
 
     impact: [
-      'Encourages responsible waste management',
-      'Supports efficient waste collection',
-      'Promotes recycling practices',
-      'Uses sustainable energy principles',
+      'Could explore more responsible waste handling',
+      'Could investigate collection workflows',
+      'Could encourage sorting and recycling design',
+      'Would consider renewable energy requirements',
     ],
 
     gallery: [
       {
         image: smartWaste,
-        label: 'Smart Waste Concept',
+        label: 'Smart waste concept visual',
       },
       {
         image: smartWasteDashboard,
-        label: 'Management Dashboard',
+        label: 'Proposed management dashboard concept',
       },
       {
         image: smartWasteResults,
-        label: 'Waste Sorting System',
+        label: 'Illustrative waste-sorting concept',
       },
       {
         image: smartWasteField,
-        label: 'Sustainability Application',
+        label: 'Illustrative sustainability application',
       },
     ],
   },
@@ -205,8 +197,6 @@ const projects = {
      ========================================================= */
 
   'library-management-system': {
-    tag: 'EDUCATION',
-
     title: 'Library Management',
 
     accent: 'System',
@@ -216,32 +206,30 @@ const projects = {
     overviewImage: libraryDashboard,
 
     description:
-      'A digital platform designed to streamline library operations and improve access to library resources.',
+      'An academic project concept for a digital library platform to organize resources and explore common library workflows.',
 
-    type: 'Software System',
+    type: 'Academic project',
 
-    technology: 'React / Supabase',
+    technology: 'Proposed: React / Supabase',
 
     category: 'Education',
 
-    status: 'Development',
+    overviewTitle: 'Planning for',
 
-    overviewTitle: 'From Manual Processes to',
-
-    overviewAccent: 'Digital Access',
+    overviewAccent: 'Digital Library Access',
 
     overview:
-      'The Library Management System is designed to support centralized library processes by providing a structured digital approach to managing books, students, borrowing, returning, availability and library records.',
+      'This academic project proposes a digital approach to organizing library resources and exploring book, student, borrowing and return workflows. It has not been implemented; the interface and system visuals represent design concepts.',
 
     focus: 'Library process management',
 
-    duration: 'Academic Project',
+    duration: 'Academic project',
 
     problem:
-      'Manual library processes can make it difficult to maintain accurate records and efficiently track books, students, borrowing and returns.',
+      'Manual library processes can make it difficult to maintain accurate records and track books, students, borrowing and returns. This project considers how a digital workflow might address those needs.',
 
     solution:
-      'The system centralizes important library processes into a digital platform, making information easier to organize, manage and access.',
+      'The proposed approach is to plan a centralized digital platform for organizing library records and workflows. A working system and its usability have not been established.',
 
     technologies: [
       'React',
@@ -251,35 +239,35 @@ const projects = {
     ],
 
     process: [
-      ['01', 'Analyse', 'Requirements'],
-      ['02', 'Design', 'System'],
-      ['03', 'Develop', 'Platform'],
-      ['04', 'Test', 'System'],
+      ['01', 'Identify', 'User needs'],
+      ['02', 'Plan', 'Data structure'],
+      ['03', 'Design', 'Workflows'],
+      ['04', 'Define', 'Testing needs'],
     ],
 
     impact: [
-      'Improves library record management',
-      'Centralizes important information',
-      'Supports efficient borrowing and returns',
-      'Improves access to library records',
+      'Could explore clearer library record organization',
+      'Could bring key information into one design',
+      'Could map borrowing and return workflows',
+      'Would require usability testing with users',
     ],
 
     gallery: [
       {
         image: librarySystem,
-        label: 'Library System',
+        label: 'Proposed library interface concept',
       },
       {
         image: libraryDashboard,
-        label: 'Library Dashboard',
+        label: 'Proposed library dashboard concept',
       },
       {
         image: librarySystemFlow,
-        label: 'System Overview',
+        label: 'Conceptual system overview',
       },
       {
         image: libraryEnvironment,
-        label: 'Library Environment',
+        label: 'Illustrative library environment',
       },
     ],
   },
@@ -301,7 +289,7 @@ function ProjectDetails() {
 
   if (!project) {
     return (
-      <main className="project-detail-page project-not-found">
+      <div className="project-detail-page project-not-found">
 
         <div className="project-not-found-content">
 
@@ -326,13 +314,13 @@ function ProjectDetails() {
 
         </div>
 
-      </main>
+      </div>
     )
   }
 
 
   return (
-    <main
+    <div
       className="project-detail-page"
       data-project={slug}
     >
@@ -364,7 +352,7 @@ function ProjectDetails() {
             <div className="project-hero-copy">
 
               <div className="project-tag">
-                {project.tag}
+                ACADEMIC PROJECT · CONCEPT
               </div>
 
               <h1>
@@ -379,16 +367,16 @@ function ProjectDetails() {
 
               <div className="project-hero-actions">
 
-                <a
-                  href={`mailto:danquahbenedicta72@gmail.com?subject=${encodeURIComponent(
-                    `Project Enquiry: ${project.title} ${project.accent}`
+                <Link
+                  to={`/contact?project=${encodeURIComponent(
+                    `${project.title} ${project.accent}`
                   )}`}
                   className="project-gold-button"
                 >
                   <span className="button-icon">✉</span>
                   Discuss Project
                   <span>↗</span>
-                </a>
+                </Link>
 
 
                 <Link
@@ -412,50 +400,18 @@ function ProjectDetails() {
 
                 <img
                   src={project.image}
-                  alt={`${project.title} ${project.accent}`}
+                  alt={`${project.title} ${project.accent} academic concept visual`}
                 />
 
 
-                {/* Crop Disease AI overlay */}
-
-                {slug === 'crop-disease-detection' && (
-                  <>
-                    <div className="detection-frame">
-
-                      <div className="detection-label">
-                        <span>Disease Detected</span>
-                        <strong>98.7%</strong>
-                      </div>
-
+                {/* Supporting project previews */}
+                <div className="hero-thumb-stack" aria-label="Project previews">
+                  {project.gallery.slice(1, 4).map((item) => (
+                    <div key={`hero-${item.label}`}>
+                      <img src={item.image} alt={item.label} />
                     </div>
-
-
-                    <div className="hero-thumb-stack">
-
-                      <div>
-                        <img
-                          src={cropDiseaseResults}
-                          alt="Crop classification"
-                        />
-                      </div>
-
-                      <div>
-                        <img
-                          src={cropDisease}
-                          alt="Crop disease"
-                        />
-                      </div>
-
-                      <div>
-                        <img
-                          src={cropDiseaseField}
-                          alt="Agricultural field"
-                        />
-                      </div>
-
-                    </div>
-                  </>
-                )}
+                  ))}
+                </div>
 
               </div>
 
@@ -491,7 +447,7 @@ function ProjectDetails() {
               </div>
 
               <div>
-                <small>PRIMARY TECHNOLOGY</small>
+                <small>TECHNOLOGIES CONSIDERED</small>
                 <strong>{project.technology}</strong>
               </div>
 
@@ -519,8 +475,8 @@ function ProjectDetails() {
               </div>
 
               <div>
-                <small>STATUS</small>
-                <strong>{project.status}</strong>
+                <small>PROJECT STAGE</small>
+                <strong>Concept · not implemented</strong>
               </div>
 
             </div>
@@ -582,7 +538,7 @@ function ProjectDetails() {
                   </span>
 
                   <div>
-                    <small>DURATION</small>
+                    <small>PROJECT CONTEXT</small>
                     <strong>{project.duration}</strong>
                   </div>
 
@@ -599,7 +555,7 @@ function ProjectDetails() {
 
               <img
                 src={project.overviewImage || project.image}
-                alt={`${project.title} project overview`}
+                alt={`${project.title} academic concept illustration`}
               />
 
             </div>
@@ -644,7 +600,7 @@ function ProjectDetails() {
 
               <div>
 
-                <span>THE SOLUTION</span>
+                <span>PROPOSED DIRECTION</span>
 
                 <h3>
                   Our Approach
@@ -666,7 +622,7 @@ function ProjectDetails() {
 
 
       {/* =====================================================
-          TECHNOLOGY STACK
+          CONCEPT TECHNOLOGIES
           ===================================================== */}
 
       <section className="technology-section">
@@ -684,12 +640,12 @@ function ProjectDetails() {
             </div>
 
             <h2>
-              Tools &amp; Technologies
+              Technologies Considered
             </h2>
 
             <p>
-              Technologies and disciplines contributing to
-              the development of this project.
+              Technologies considered as part of the academic proposal;
+              they have not been used to implement a working system.
             </p>
 
           </div>
@@ -737,16 +693,16 @@ function ProjectDetails() {
 
             <div className="project-section-label">
               <span />
-              TECHNOLOGY
+              PROPOSED WORKFLOW
             </div>
 
             <h2>
-              How It Works
+              How It Could Be Explored
             </h2>
 
             <p className="section-supporting-text">
-              A simple, structured process used to approach
-              the project challenge.
+              A proposed sequence of steps for future investigation,
+              not a record of completed implementation.
             </p>
 
 
@@ -792,18 +748,17 @@ function ProjectDetails() {
 
             <div className="project-section-label">
               <span />
-              EXPECTED IMPACT
+              POTENTIAL VALUE · NOT YET TESTED
             </div>
 
             <h2>
-              Creating Meaningful Results
+              Questions for Future Development
             </h2>
 
             <p>
-              The project demonstrates how data and technology
-              can be applied to a practical challenge while
-              creating a foundation for future intelligent
-              systems.
+              These are possible areas to investigate if the concept
+              is developed. No system, impact, or outcome has been
+              implemented or measured.
             </p>
 
 
@@ -842,15 +797,15 @@ function ProjectDetails() {
 
           <div className="project-section-label light">
             <span />
-            PROJECT VISUAL
+            ACADEMIC CONCEPT VISUALS
           </div>
 
           <h2>
-            A closer look at the project
+            A closer look at the proposal
           </h2>
 
           <p className="gallery-description">
-            Explore key visuals and outputs from the{' '}
+            Explore illustrative concept visuals for the academic project{' '}
             {project.title.toLowerCase()}{' '}
             {project.accent.toLowerCase()} project.
           </p>
@@ -904,17 +859,16 @@ function ProjectDetails() {
           <div className="cta-copy">
 
             <span className="cta-eyebrow">
-              READY TO BUILD SOMETHING GREAT?
+              INTERESTED IN THIS ACADEMIC CONCEPT?
             </span>
 
             <h2>
-              Let's Work <em>Together</em>
+              Let's Discuss <em>the Idea</em>
             </h2>
 
             <p>
-              Have an idea, a project, or simply want to discuss
-              how data and technology can create meaningful impact?
-              I'd love to hear from you.
+              This is a proposed academic concept, not a working product.
+              Get in touch to discuss the idea or a related collaboration.
             </p>
 
           </div>
@@ -922,9 +876,9 @@ function ProjectDetails() {
 
           <div className="cta-actions">
 
-            <a
-              href={`mailto:danquahbenedicta72@gmail.com?subject=${encodeURIComponent(
-                `Project Enquiry: ${project.title} ${project.accent}`
+            <Link
+              to={`/contact?project=${encodeURIComponent(
+                `${project.title} ${project.accent}`
               )}`}
               className="project-gold-button"
             >
@@ -937,7 +891,7 @@ function ProjectDetails() {
               <span>
                 ↗
               </span>
-            </a>
+            </Link>
 
 
             <Link
@@ -954,7 +908,7 @@ function ProjectDetails() {
 
       </section>
 
-    </main>
+    </div>
   )
 }
 

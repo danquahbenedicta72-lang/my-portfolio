@@ -36,7 +36,6 @@ function Project({ projects }) {
 
       </div>
 
-
       {/* =====================================================
           PROJECT CARDS
           ===================================================== */}
@@ -51,7 +50,12 @@ function Project({ projects }) {
           >
 
             {/* PROJECT IMAGE */}
-
+            {/*
+              IMPORTANT:
+              There is deliberately NO <span> tag here.
+              The category label must not be rendered a second
+              time over the project image.
+            */}
             <div className="project-image">
 
               <img
@@ -61,9 +65,7 @@ function Project({ projects }) {
 
             </div>
 
-
             {/* PROJECT INFORMATION */}
-
             <div className="project-content">
 
               <h3>
@@ -74,13 +76,11 @@ function Project({ projects }) {
                 {project.text}
               </p>
 
-
               {/* PROJECT LINK */}
-
               <Link
                 to={`/projects/${project.slug}`}
               >
-                Discuss Project
+                View Case Study
                 <span>↗</span>
               </Link>
 
